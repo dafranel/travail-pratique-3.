@@ -6,4 +6,6 @@ module com.example.travailpratique3 {
 
     opens com.example.travailpratique3 to javafx.fxml;
     exports com.example.travailpratique3;
+    exports controller;
+    opens controller to javafx.fxml;
 }
