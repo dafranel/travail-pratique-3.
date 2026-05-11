@@ -1,46 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?>
+package com.example.travailpratique3.model;
 
-        <?import javafx.scene.control.*?>
-        <?import javafx.scene.layout.*?>
+import javafx.scene.image.Image;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.ImagePattern;
+import javafx.scene.shape.Circle;
 
-<BorderPane xmlns:fx="http://javafx.com/fxml"
-fx:controller="com.example.travailpratique3.controller.BallesController"
-styleClass="page-balles">
+/**
+ * Représente une balle rebondissante.
+ */
+public class Balle extends Circle {
 
-    <top>
-        <VBox alignment="CENTER" spacing="5" styleClass="entete-page">
-            <Label text="Jeu de balles rebondissantes" styleClass="titre-page"/>
-            <Label text="Collision Roche - Papier - Ciseaux" styleClass="sous-titre-page"/>
-        </VBox>
-    </top>
+    private double vitesseX;
+    private double vitesseY;
+    private TypeBalle type;
 
-    <center>
-        <StackPane alignment="CENTER" styleClass="conteneur-jeu">
-            <Pane fx:id="zoneJeu"
-prefWidth="700"
-prefHeight="430"
-minWidth="700"
-minHeight="430"
-maxWidth="700"
-maxHeight="430"
-styleClass="zone-jeu"/>
-        </StackPane>
-    </center>
+    public Balle(double x, double y, double rayon, TypeBalle type, Image image) {
+        super(x, y, rayon);
 
-    <bottom>
-        <HBox alignment="CENTER" spacing="20" styleClass="zone-boutons">
-            <Button text="Ajouter 3 balles"
-onAction="#ajouterTroisBalles"
-styleClass="bouton-action"/>
+        this.type = type;
 
-            <Button text="Ajouter une balle"
-onMouseClicked="#ajouterUneBalle"
-styleClass="bouton-action"/>
+        vitesseX = Math.random() * 4 + 2;
+        vitesseY = Math.random() * 4 + 2;
 
-            <Button text="Retirer une balle"
-onMouseClicked="#retirerUneBalle"
-styleClass="bouton-action"/>
-        </HBox>
-    </bottom>
+        if (Math.random() < 0.5) {
+            vitesseX = -vitesseX;
+        }
 
-</BorderPane>
+        if (Math.random() < 0.5) {
+            vitesseY = -vitesseY;
+        }
+
+        setFill(new ImagePattern(image));
+        setStroke(Color.BLACK);
+        setStrokeWidth(1);
+    }
+
+    public void deplacer() {
+        setCenterX(getCenterX() + vitesseX);
+        setCenterY(getCenterY() + vitesseY);
+    }
+
+    public void inverserX() {
+        vitesseX = -vitesseX;
+    }
+
+    public void inverserY() {
+        vitesseY = -vitesseY;
+    }
+
+    public TypeBalle getType() {
+        return type;
+    }
+
+    public void setType(TypeBalle type, Image image) {
+        this.type = type;
+        setFill(new ImagePattern(image));
+    }
+}

@@ -1,14 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
+<BorderPane styleClass="root" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="com.example.travailpratique3.controller.MenuController">
 
-</AnchorPane>
+    <left>
+        <VBox prefHeight="254.0" prefWidth="231.0" spacing="15" styleClass="menu-lateral">
+
+            <Label styleClass="titre-menu" text="TP3 JavaFX" />
+
+            <Button onAction="#ouvrirBalles" styleClass="bouton-menu" text="Balles rebondissantes">
+                <graphic>
+                    <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
+                        <image>
+                            <Image url="@../images/logo_balles.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button onAction="#ouvrirQuiz" styleClass="bouton-menu" text="Quiz Québec/Canada">
+                <graphic>
+                    <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
+                        <image>
+                            <Image url="@../images/logo_quiz.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button onAction="#ouvrirRegles" styleClass="bouton-menu" text="Règlements">
+                <graphic>
+                    <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
+                        <image>
+                            <Image url="@../images/logo_regles.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button onAction="#ouvrirVideo" styleClass="bouton-menu" text="Vidéo">
+                <graphic>
+                    <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
+                        <image>
+                            <Image url="@../images/logo_video.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button onAction="#quitterApplication" styleClass="bouton-menu" text="Quitter">
+                <graphic>
+                    <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
+                        <image>
+                            <Image url="@../images/logo_quitter.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+        </VBox>
+    </left>
+
+    <center>
+        <StackPane fx:id="zoneContenu" styleClass="zone-contenu" />
+    </center>
+
+</BorderPane>
