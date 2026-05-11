@@ -119,6 +119,8 @@ public class BallesController {
             balle.deplacer();
             verifierRebond(balle);
         }
+
+        verifierCollisions();
     }
 
     private void verifierRebond(Balle balle) {
@@ -131,5 +133,45 @@ public class BallesController {
         if (balle.getCenterY() - rayon <= 0 || balle.getCenterY() + rayon >= zoneJeu.getHeight()) {
             balle.inverserY();
         }
+    }
+
+    private void verifierCollisions() {
+        for (int i = 0; i < balles.size(); i++) {
+            for (int j = i + 1; j < balles.size(); j++) {
+
+                Balle b1 = balles.get(i);
+                Balle b2 = balles.get(j);
+
+                double dx = b1.getCenterX() - b2.getCenterX();
+                double dy = b1.getCenterY() - b2.getCenterY();
+
+                double distance = Math.sqrt(dx * dx + dy * dy);
+
+                if (distance <= b1.getRadius() + b2.getRadius()) {
+                    appliquerCombat(b1, b2);
+                    separerBalles(b1, b2);
+                }
+            }
+        }
+    }
+
+    private void appliquerCombat(Balle b1, Balle b2) {
+        if (b1.getType() == b2.getType()) {
+            return;
+        }
+
+        if (b1.getType().gagneContre(b2.getType())) {
+            b2.setType(b1.getType(), imageSelonType(b1.getType()));
+        } else {
+            b1.setType(b2.getType(), imageSelonType(b2.getType()));
+        }
+    }
+
+    private void separerBalles(Balle b1, Balle b2) {
+        b1.inverserX();
+        b1.inverserY();
+
+        b2.inverserX();
+        b2.inverserY();
     }
 }
