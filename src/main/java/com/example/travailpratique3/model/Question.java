@@ -1,100 +1,29 @@
 package com.example.travailpratique3.model;
 
-import javafx.scene.image.Image;
-import javafx.scene.paint.Color;
-import javafx.scene.paint.ImagePattern;
-import javafx.scene.shape.Circle;
-
 /**
- * Classe représentant une balle rebondissante.
- *
- * Chaque balle possède :
- * - un type : roche, papier ou ciseaux;
- * - une image;
- * - une vitesse horizontale;
- * - une vitesse verticale;
- * - un contour noir.
+ * Représente une question du quiz Québec/Canada.
  */
-public class Question extends Circle {
+public class Question {
 
-    /** Vitesse horizontale de la balle. */
-    private double vitesseX;
+    private final String texte;
+    private final String[] choix;
+    private final int bonneReponse;
 
-    /** Vitesse verticale de la balle. */
-    private double vitesseY;
-
-    /** Type actuel de la balle. */
-    private com.example.travailpratique3.model.Question type;
-
-    /**
-     * Constructeur d'une balle.
-     *
-     * @param x position horizontale
-     * @param y position verticale
-     * @param rayon rayon de la balle
-     * @param type type roche, papier ou ciseaux
-     * @param image image associée au type
-     */
-    public Question(double x, double y, double rayon, com.example.travailpratique3.model.Question type, Image image) {
-        super(x, y, rayon);
-
-        this.type = type;
-
-        this.vitesseX = Math.random() * 4 + 2;
-        this.vitesseY = Math.random() * 4 + 2;
-
-        if (Math.random() < 0.5) {
-            vitesseX = -vitesseX;
-        }
-
-        if (Math.random() < 0.5) {
-            vitesseY = -vitesseY;
-        }
-
-        setFill(new ImagePattern(image));
-        setStroke(Color.BLACK);
-        setStrokeWidth(1);
+    public Question(String texte, String[] choix, int bonneReponse) {
+        this.texte = texte;
+        this.choix = choix;
+        this.bonneReponse = bonneReponse;
     }
 
-    /**
-     * Déplace la balle selon sa vitesse.
-     */
-    public void deplacer() {
-        setCenterX(getCenterX() + vitesseX);
-        setCenterY(getCenterY() + vitesseY);
+    public String getTexte() {
+        return texte;
     }
 
-    /**
-     * Inverse la direction horizontale.
-     */
-    public void inverserX() {
-        vitesseX = -vitesseX;
+    public String[] getChoix() {
+        return choix;
     }
 
-    /**
-     * Inverse la direction verticale.
-     */
-    public void inverserY() {
-        vitesseY = -vitesseY;
-    }
-
-    /**
-     * Retourne le type de la balle.
-     *
-     * @return type actuel
-     */
-    public com.example.travailpratique3.model.Question getType() {
-        return type;
-    }
-
-    /**
-     * Modifie le type et l'image de la balle.
-     *
-     * @param type nouveau type
-     * @param image nouvelle image
-     */
-    public void setType(com.example.travailpratique3.model.Question type, Image image) {
-        this.type = type;
-        setFill(new ImagePattern(image));
+    public int getBonneReponse() {
+        return bonneReponse;
     }
 }
