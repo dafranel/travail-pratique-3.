@@ -56,6 +56,19 @@ public class BallesController {
             zoneJeu.getChildren().remove(derniere);
         }
     }
+    @FXML
+    private void mettreEnPause(MouseEvent event) {
+        if (animation != null) {
+            animation.stop();
+        }
+    }
+
+    @FXML
+    private void reprendreAnimation(MouseEvent event) {
+        if (animation != null) {
+            animation.start();
+        }
+    }
 
     private void ajouterBalle() {
         double rayon = 20;

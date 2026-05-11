@@ -23,7 +23,9 @@
                   minHeight="430"
                   maxWidth="700"
                   maxHeight="430"
-                  styleClass="zone-jeu"/>
+                  styleClass="zone-jeu"
+                  onMousePressed="#mettreEnPause"
+                  onMouseReleased="#reprendreAnimation"/>
         </StackPane>
     </center>
 
