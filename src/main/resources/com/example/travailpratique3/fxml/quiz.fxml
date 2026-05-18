@@ -33,15 +33,18 @@
     <Label fx:id="labelScore" styleClass="score"/>
 
     <HBox alignment="CENTER" spacing="15">
-        <Button text="Question suivante"
+        <Button fx:id="btnQuestionSuivante"
+                text="Question suivante"
                 onAction="#questionSuivante"
                 styleClass="bouton-action"/>
 
-        <Button text="Recommencer"
+        <Button fx:id="btnRecommencer"
+                text="Recommencer"
                 onAction="#recommencerQuiz"
                 styleClass="bouton-action"/>
 
-        <Button text="Changer thème"
+        <Button fx:id="btnChangerTheme"
+                text="Changer thème"
                 onAction="#changerTheme"
                 styleClass="bouton-action"/>
     </HBox>

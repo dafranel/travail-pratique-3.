@@ -31,15 +31,18 @@
 
     <bottom>
         <HBox alignment="CENTER" spacing="20" styleClass="zone-boutons">
-            <Button text="Ajouter 3 balles"
+            <Button fx:id="btnAjouterTrois"
+                    text="Ajouter 3 balles"
                     onAction="#ajouterTroisBalles"
                     styleClass="bouton-action"/>
 
-            <Button text="Ajouter une balle"
+            <Button fx:id="btnAjouterUne"
+                    text="Ajouter une balle"
                     onMouseClicked="#ajouterUneBalle"
                     styleClass="bouton-action"/>
 
-            <Button text="Retirer une balle"
+            <Button fx:id="btnRetirerUne"
+                    text="Retirer une balle"
                     onMouseClicked="#retirerUneBalle"
                     styleClass="bouton-action"/>
         </HBox>

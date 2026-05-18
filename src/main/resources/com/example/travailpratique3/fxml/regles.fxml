@@ -1,14 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
+            prefHeight="650.0"
+            prefWidth="780.0"
+            styleClass="page-regles">
+
+    <ScrollPane fitToWidth="true"
+                AnchorPane.topAnchor="0.0"
+                AnchorPane.bottomAnchor="0.0"
+                AnchorPane.leftAnchor="0.0"
+                AnchorPane.rightAnchor="0.0"
+                styleClass="page-regles">
+
+        <content>
+            <VBox spacing="18"
+                  styleClass="contenu-regles">
+
+                <Label text="Règlements des jeux"
+                       styleClass="titre-page"/>
+
+                <Label text="1. Jeu des balles rebondissantes"
+                       styleClass="titre-section"/>
+
+                <Label wrapText="true"
+                       text="Le joueur peut ajouter des balles dans la zone de jeu à l’aide des boutons situés en bas de l’écran."/>
+
+                <Label wrapText="true"
+                       text="Le bouton « Ajouter 3 balles » ajoute trois balles en même temps. Les balles suivent toujours l’ordre Roche, Papier, Ciseaux."/>
+
+                <Label wrapText="true"
+                       text="Le bouton « Ajouter une balle » ajoute une seule balle à la fois. L’ordre Roche, Papier, Ciseaux continue normalement."/>
+
+                <Label wrapText="true"
+                       text="Le bouton « Retirer une balle » enlève la dernière balle ajoutée dans la zone de jeu."/>
+
+                <Label wrapText="true"
+                       text="Chaque balle est ronde, possède une image, un contour noir et rebondit lorsqu’elle touche les bordures de la zone de jeu."/>
+
+                <Label wrapText="true"
+                       text="Lorsqu’une balle rencontre une autre balle, un combat Roche-Papier-Ciseaux est effectué."/>
+
+                <Label wrapText="true"
+                       text="Les règles du combat sont : Roche bat Ciseaux, Papier bat Roche et Ciseaux bat Papier."/>
+
+                <Label wrapText="true"
+                       text="La balle perdante prend le type et l’image de la balle gagnante. Les balles continuent ensuite leur trajectoire sans rebondir l’une contre l’autre."/>
+
+                <Label wrapText="true"
+                       text="Bonus : lorsque le joueur maintient le clic de souris dans la zone de jeu, les balles se mettent en pause. Lorsqu’il relâche le clic, elles recommencent à bouger."/>
+
+                <Separator/>
+
+                <Label text="2. Quiz Québec / Canada"
+                       styleClass="titre-section"/>
+
+                <Label wrapText="true"
+                       text="Le quiz est un jeu de questions à choix multiples portant sur le Québec, le Canada, les dates importantes, les personnalités et la culture générale."/>
+
+                <Label wrapText="true"
+                       text="Chaque question propose quatre choix de réponse. Le joueur doit cliquer sur la réponse qu’il pense être correcte."/>
+
+                <Label wrapText="true"
+                       text="Lorsqu’une réponse est choisie, le programme indique immédiatement si elle est bonne ou mauvaise."/>
+
+                <Label wrapText="true"
+                       text="Si la réponse est bonne, le score du joueur augmente et un son de réussite est joué."/>
+
+                <Label wrapText="true"
+                       text="Si la réponse est mauvaise, le programme affiche la bonne réponse et un son d’erreur est joué."/>
+
+                <Label wrapText="true"
+                       text="Après avoir répondu, le joueur doit cliquer sur « Question suivante » pour passer à la prochaine question."/>
+
+                <Label wrapText="true"
+                       text="Le joueur ne peut pas répondre plusieurs fois à la même question."/>
+
+                <Label wrapText="true"
+                       text="À la fin du quiz, le résultat final est affiché avec une appréciation selon le score obtenu."/>
+
+                <Label wrapText="true"
+                       text="Le bouton « Recommencer » permet de reprendre le quiz depuis le début."/>
+
+                <Label wrapText="true"
+                       text="Le bouton « Changer thème » permet d’alterner entre le thème clair et le thème sombre."/>
+
+                <Label wrapText="true"
+                       text="Un son est également joué lorsque la souris survole certains boutons de l’application."/>
+
+            </VBox>
+        </content>
+    </ScrollPane>
 
 </AnchorPane>

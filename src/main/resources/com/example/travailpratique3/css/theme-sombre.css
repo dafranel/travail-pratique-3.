@@ -1,14 +1,178 @@
-<?xml version="1.0" encoding="UTF-8"?>
+.root {
+    -fx-background-color: #101820;
+    -fx-font-family: "Segoe UI";
+}
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+/* MENU */
+.menu-lateral {
+    -fx-background-color: #000000;
+    -fx-padding: 20;
+    -fx-pref-width: 220;
+    -fx-alignment: top-center;
+}
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
+.titre-menu {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffcc00;
+    -fx-padding: 0 0 20 0;
+}
 
-</AnchorPane>
+.bouton-menu {
+    -fx-pref-width: 190;
+    -fx-pref-height: 45;
+    -fx-background-color: #0057b8;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 10;
+    -fx-alignment: center-left;
+}
+
+.bouton-menu:hover {
+    -fx-background-color: #003f88;
+    -fx-scale-x: 1.04;
+    -fx-scale-y: 1.04;
+}
+
+/* ZONE PRINCIPALE */
+.zone-contenu {
+    -fx-background-color: #101820;
+}
+
+/* PAGE BALLES */
+.page-balles {
+    -fx-background-color: #101820;
+}
+
+.entete-page {
+    -fx-padding: 15;
+}
+
+.titre-page {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffcc00;
+}
+
+.sous-titre-page {
+    -fx-font-size: 15px;
+    -fx-text-fill: #dddddd;
+}
+
+.conteneur-jeu {
+    -fx-padding: 10;
+}
+
+.zone-jeu {
+    -fx-border-color: white;
+    -fx-border-width: 2;
+    -fx-background-color: #222222;
+}
+
+.zone-boutons {
+    -fx-padding: 18;
+    -fx-background-color: black;
+}
+
+.bouton-action {
+    -fx-background-color: #ffcc00;
+    -fx-text-fill: black;
+    -fx-background-radius: 10;
+    -fx-padding: 10 18 10 18;
+    -fx-font-size: 14px;
+}
+
+.bouton-action:hover {
+    -fx-background-color: #d6a900;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* QUIZ */
+.page-quiz {
+    -fx-background-color: linear-gradient(to bottom, #101820, #1d3557);
+    -fx-padding: 35;
+}
+
+.titre-quiz {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffcc00;
+}
+
+.progression {
+    -fx-font-size: 15px;
+    -fx-text-fill: #dddddd;
+}
+
+.question {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+}
+
+.label {
+    -fx-text-fill: white;
+}
+
+.bouton-reponse {
+    -fx-pref-width: 520;
+    -fx-pref-height: 45;
+    -fx-background-radius: 12;
+    -fx-background-color: #0057b8;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+}
+
+.bouton-reponse:hover {
+    -fx-background-color: #003f88;
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+.feedback {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-text-alignment: center;
+}
+
+.score {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffcc00;
+}
+
+/* COULEURS RÉPONSES */
+.bonne-reponse {
+    -fx-background-color: #2e7d32;
+    -fx-text-fill: white;
+}
+
+.mauvaise-reponse {
+    -fx-background-color: #c62828;
+    -fx-text-fill: white;
+}
+
+/* RÈGLES */
+.page-regles {
+    -fx-background-color: #101820;
+}
+
+.contenu-regles {
+    -fx-padding: 35;
+}
+
+.titre-section {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffcc00;
+}
+
+/* VIDÉO */
+.page-video {
+    -fx-background-color: #101820;
+    -fx-padding: 35;
+}
