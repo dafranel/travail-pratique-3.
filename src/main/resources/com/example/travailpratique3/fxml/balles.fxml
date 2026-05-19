@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.travailpratique3.controller.BallesController"
+            styleClass="page-balles">
+
+    <top>
+        <VBox alignment="CENTER" spacing="5" styleClass="entete-page">
+            <Label text="Jeu de balles rebondissantes" styleClass="titre-page"/>
+            <Label text="Collision Roche - Papier - Ciseaux" styleClass="sous-titre-page"/>
+        </VBox>
+    </top>
+
+    <center>
+        <StackPane alignment="CENTER" styleClass="conteneur-jeu">
+            <Pane fx:id="zoneJeu"
+                  prefWidth="700"
+                  prefHeight="430"
+                  minWidth="700"
+                  minHeight="430"
+                  maxWidth="700"
+                  maxHeight="430"
+                  styleClass="zone-jeu"
+                  onMousePressed="#mettreEnPause"
+                  onMouseReleased="#reprendreAnimation"/>
+        </StackPane>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER" spacing="20" styleClass="zone-boutons">
+            <Button fx:id="btnAjouterTrois"
+                    text="Ajouter 3 balles"
+                    onAction="#ajouterTroisBalles"
+                    styleClass="bouton-action"/>
+
+            <Button fx:id="btnAjouterUne"
+                    text="Ajouter une balle"
+                    onMouseClicked="#ajouterUneBalle"
+                    styleClass="bouton-action"/>
+
+            <Button fx:id="btnRetirerUne"
+                    text="Retirer une balle"
+                    onMouseClicked="#retirerUneBalle"
+                    styleClass="bouton-action"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

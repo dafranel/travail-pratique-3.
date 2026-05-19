@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane styleClass="root" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.travailpratique3.controller.MenuController">
+
+    <left>
+        <VBox prefHeight="254.0" prefWidth="231.0" spacing="15" styleClass="menu-lateral">
+
+            <Label styleClass="titre-menu" text="TP3 JavaFX" />
+
+            <Button fx:id="btnBalles" onAction="#ouvrirBalles" styleClass="bouton-menu" text="Balles rebondissantes">
+                <graphic>
+                    <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
+                        <image>
+                            <Image url="@../images/logo_balles.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button fx:id="btnQuiz" onAction="#ouvrirQuiz" styleClass="bouton-menu" text="Quiz Québec/Canada">
+                <graphic>
+                    <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
+                        <image>
+                            <Image url="@../images/logo_quiz.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button fx:id="btnRegles" onAction="#ouvrirRegles" styleClass="bouton-menu" text="Règlements">
+                <graphic>
+                    <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
+                        <image>
+                            <Image url="@../images/logo_regles.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+            <Button fx:id="btnQuitter" onAction="#quitterApplication" styleClass="bouton-menu" text="Quitter">
+                <graphic>
+                    <ImageView fitHeight="24" fitWidth="24" preserveRatio="true">
+                        <image>
+                            <Image url="@../images/logo_quitter.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Button>
+
+        </VBox>
+    </left>
+
+    <center>
+        <StackPane fx:id="zoneContenu" styleClass="zone-contenu" />
+    </center>
+
+</BorderPane>

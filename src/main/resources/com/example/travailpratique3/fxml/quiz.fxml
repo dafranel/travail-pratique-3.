@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.travailpratique3.controller.QuizController"
+      alignment="CENTER"
+      spacing="18"
+      styleClass="page-quiz">
+
+    <Label text="Quiz Québec &amp; Canada" styleClass="titre-quiz"/>
+
+    <Label fx:id="labelProgression" styleClass="progression"/>
+
+    <Label fx:id="labelQuestion"
+           wrapText="true"
+           maxWidth="650"
+           styleClass="question"/>
+
+    <VBox spacing="12" alignment="CENTER">
+        <Button fx:id="btn1" onAction="#reponse1" styleClass="bouton-reponse"/>
+        <Button fx:id="btn2" onAction="#reponse2" styleClass="bouton-reponse"/>
+        <Button fx:id="btn3" onAction="#reponse3" styleClass="bouton-reponse"/>
+        <Button fx:id="btn4" onAction="#reponse4" styleClass="bouton-reponse"/>
+    </VBox>
+
+    <Label fx:id="labelFeedback"
+           wrapText="true"
+           maxWidth="650"
+           styleClass="feedback"/>
+
+    <Label fx:id="labelScore" styleClass="score"/>
+
+    <HBox alignment="CENTER" spacing="15">
+        <Button fx:id="btnQuestionSuivante"
+                text="Question suivante"
+                onAction="#questionSuivante"
+                styleClass="bouton-action"/>
+
+        <Button fx:id="btnRecommencer"
+                text="Recommencer"
+                onAction="#recommencerQuiz"
+                styleClass="bouton-action"/>
+
+        <Button fx:id="btnChangerTheme"
+                text="Changer thème"
+                onAction="#changerTheme"
+                styleClass="bouton-action"/>
+    </HBox>
+
+</VBox>
